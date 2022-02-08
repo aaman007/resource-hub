@@ -7,3 +7,16 @@ services:
       - "5000:5000"
     volumes:
       - .:/app
+
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: resource_hub
+      MYSQL_USER: aaman007
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - .db:/var/lib/mysql
+    ports:
+      - "33067:3306"

@@ -1,5 +1,9 @@
 FROM python:3.8-slim-buster
 
+ENV PYTHONUNBUFFERED 0
+RUN apt-get update
+RUN apt-get -y install default-libmysqlclient-dev gcc
+
 WORKDIR /app
 
 COPY requirements.txt .

@@ -8,7 +8,7 @@ class Config:
     API_VERSION = 'v1'
     OPENAPI_VERSION = '3.0.2'
 
-    SQLALCHEMY_DATABASE_URI = ''
+    SQLALCHEMY_DATABASE_URI = 'mysql://aaman007:password@db/resource_hub'
 
 
 class DevelopmentConfig(Config):
