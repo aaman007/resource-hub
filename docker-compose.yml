@@ -7,6 +7,9 @@ services:
       - "5000:5000"
     volumes:
       - .:/app
+    depends_on:
+      - db
+      - broker
 
   db:
     image: mysql:5.7
@@ -20,3 +23,9 @@ services:
       - .db:/var/lib/mysql
     ports:
       - "33067:3306"
+
+  broker:
+    image: redis
+    restart: always
+    ports:
+      - "63790:6379"

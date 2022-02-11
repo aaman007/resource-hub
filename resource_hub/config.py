@@ -20,5 +20,5 @@ class StagingConfig(Config):
     DEBUG = False
 
 
-class ProductionConfig(Config):
+class ProductionConfig(StagingConfig):
     pass

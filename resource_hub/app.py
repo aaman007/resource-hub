@@ -34,6 +34,7 @@ api = create_api(app)
 register_blueprints(api, INSTALLED_BLUEPRINTS)
 
 
+# Demo API Endpoints
 @app.route('/')
 def hello():
     return 'Hello World'
